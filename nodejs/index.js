@@ -22,7 +22,7 @@ const config = {
   NEZHA_PORT: process.env.NEZHA_PORT || '',           // 哪吒v1请留空，哪吒v0 agent端口
   NEZHA_KEY: process.env.NEZHA_KEY || '',             // 哪吒v1的NZ_CLIENT_SECRET或哪吒v0-agent密钥
 
-  CFIP: process.env.CFIP || 'mfa.gov.ua',             // 优选域名或优选ip
+  CFIP: process.env.CFIP || 'saas.sin.fan',             // 优选域名或优选ip
   CFPORT: process.env.CFPORT || '443',                // 优选域名或优选ip对应端口
   NAME: process.env.NAME || '',                       // 节点备注
   
