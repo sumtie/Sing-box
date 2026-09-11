@@ -1,7 +1,7 @@
-origin: https://github.com/eooce/Sing-box
+from
+- https://github.com/eooce/Sing-box
+- https://github.com/eishare/Singbox-nodejs
 
 js-obfuscator: https://jshaman.com/index.html
 
-eooce nav: https://nav.eooce.com
-
-Thanks to eooce
+Thanks to eooce, eishare
