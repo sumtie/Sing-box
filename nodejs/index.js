@@ -11,27 +11,19 @@ const { spawn, execSync } = require('child_process');
 // 环境变量
 const PORT = process.env.PORT || 3000;           // http 服务
 const config = {
-  // ====================== 需要修改的部分 start ====================
   UUID: process.env.UUID || 'a29738e5-bee1-c0fc-b484-ae7c49cbc828',  // 节点UUID，使用哪吒v1时在不不同的平台部署需要修改，否则agent会覆盖
-  ARGO_DOMAIN: process.env.ARGO_DOMAIN || '',         // argo固定隧道域名,留空即启用临时隧道
-  ARGO_AUTH: process.env.ARGO_AUTH || '',             // argo固定隧道token或json,留空即启用临时隧道,json获取:https://json.zone.id
-  ARGO_PORT: process.env.ARGO_PORT || '8001',         // argo隧道端口 使用固定隧道token,cloudflare后台设置的端口需和这里对应
-  // ====================== 需要修改的部分 end ======================
-
   NEZHA_SERVER: process.env.NEZHA_SERVER || '',       // 哪吒面板地址，v1格式: nezha.xxx.com:8008  v0格式： nezha.xxx.com
   NEZHA_PORT: process.env.NEZHA_PORT || '',           // 哪吒v1请留空，哪吒v0 agent端口
   NEZHA_KEY: process.env.NEZHA_KEY || '',             // 哪吒v1的NZ_CLIENT_SECRET或哪吒v0-agent密钥
-
-  CFIP: process.env.CFIP || 'saas.sin.fan',             // 优选域名或优选ip
+  ARGO_DOMAIN: process.env.ARGO_DOMAIN || '',         // argo固定隧道域名,留空即启用临时隧道
+  ARGO_AUTH: process.env.ARGO_AUTH || '',             // argo固定隧道token或json,留空即启用临时隧道,json获取:https://json.zone.id
+  ARGO_PORT: process.env.ARGO_PORT || '8001',         // argo隧道端口 使用固定隧道token,cloudflare后台设置的端口需和这里对应
+  CFIP: process.env.CFIP || 'saas.sin.fan',           // 优选域名或优选ip
   CFPORT: process.env.CFPORT || '443',                // 优选域名或优选ip对应端口
   NAME: process.env.NAME || '',                       // 节点备注
-  
-  // HY2、TUIC属于 udp
-  // 其他的属于 tcp
-  // udp和tcp可以共用一个端口，如果平台只给了一个端口，就选一个udp，一个tcp，一般选择 HY2 + ANYTLS
   S5_PORT: process.env.S5_PORT || '',                 // socks5端口,支持多端口玩具可填写，否则不动
-  TUIC_PORT: process.env.TUIC_PORT || '',             // Tuic 端口，支持多端口玩具可填写，否则不动 
   HY2_PORT: process.env.HY2_PORT || '',               // Hy2 端口，支持多端口玩具可填写，否则不动
+  TUIC_PORT: process.env.TUIC_PORT || '',             // Tuic 端口，支持多端口玩具可填写，否则不动 
   ANYTLS_PORT: process.env.ANYTLS_PORT || '',         // AnyTLS 端口,支持多端口玩具可填写，否则不动
   REALITY_PORT: process.env.REALITY_PORT || '',       // Reality 端口,支持多端口玩具可填写，否则不动  
   ANYREALITY_PORT: process.env.ANYREALITY_PORT || '', // Any Reality 端口,支持多端口玩具可填写，否则不动
