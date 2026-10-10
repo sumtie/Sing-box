@@ -6,7 +6,7 @@
 
 const TUIC_PORT = process.env.TUIC_PORT || "";                                  // TUIC 端口（留空=不部署）
 
-const ARGO_PORT = process.env.ARGO_PORT || "8001";                              // Argo回源端口填入8001 （留空=不部署：临时/固定隧道）
+const ARGO_PORT = process.env.ARGO_PORT || "";                                  // Argo回源端口 （留空=不部署：临时/固定隧道）
 
 const ARGO_PROTOCOL = process.env.ARGO_PROTOCOL || "quic";                      // http2或quic（http2=稳定+低占用；quic=响应快+占用略高）
 
