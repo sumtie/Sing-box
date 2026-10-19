@@ -6,6 +6,6 @@ js-obfuscator:
 
 https://jshaman.com/index.html
 
-https://obfuscator.io/legacy-playground
+https://eooce.dev
 
 Thanks to eooce, eishare
