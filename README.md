@@ -1,9 +1,8 @@
 from
-- https://github.com/eooce/Sing-box
 - https://github.com/eishare/Node.js
 
 
-Thanks to eooce, eishare
+Thanks to eishare
 
 
 ## 1. ✔ 最新xHTTP版Argo+TUIC方案：xHTTP抗封锁升级、H3(UDP)告别晚高峰龟速：
